@@ -368,7 +368,14 @@ else{
 // mude o valor da compra para 250 onde ele foi criado para ver como muda o resultado do console.log().
 // Resposta 13:
 
-
+let valorCompra = 150
+let valorFrete = 20
+if(valorCompra > 200, valorFrete = 0){
+    console.log("O frete custa")
+}
+else{
+    console.log("Frete é gratis")
+}
 
 // EXERCÍCIO 14: Aprovação de Empréstimo
 // Para o banco emprestar dinheiro, o cliente deve ter:
@@ -381,8 +388,16 @@ else{
 // -> Imprima "Empréstimo Aprovado" ou "Empréstimo Recusado" dependendo do resultado.
 
 // Resposta 14:
+let nomeLimpo = true
+let renda = 2000
+let clienteVip = "vip"
 
-
+if(nomeLimpo == true && renda >= 2000 || clienteVip){
+    console.log("Empréstimo Aprovado" )
+}
+else{
+    console.log("Empréstimo Recusado")
+}
 
 // EXERCÍCIO 15: O Caixa Eletrônico (Desafio Final)
 // Vamos simular um saque.
@@ -397,8 +412,15 @@ else{
 //         Imprima "Saldo insuficiente".
 
 // Resposta 15:
-
-
+let saldoDisponivel = 500
+let valorSaque = 200
+if(valorSaque <= saldoDisponivel){
+saldoDisponivel = saldoDisponivel - valorSaque
+    console.log("Saque realizado. Novo saldo: " + saldoDisponivel)
+}
+else{
+    console.log("Saldo insuficiente")
+}
 
 </script>
 </html>
