@@ -93,7 +93,10 @@ divEx2.textContent =  JSON.stringify(listaUsuarios);
     
     // Seu código Ex 3:
 
-for()
+for (let i = 0; i < listaUsuarios.length; i++) {
+    const emailAtual = listaUsuarios[i].email;
+    divEx3.textContent += emailAtual + ' ';
+}
 
 
     // --- EXERCÍCIO 4: Criando Elementos (A Fábrica de <p>) ---
@@ -105,6 +108,13 @@ for()
     // 3. Coloque o email dentro desse 'p' (.textContent).
     // 4. Adicione (appendChild) esse 'p' dentro da 'divEx5'.
     
+    // Seu código Ex 4:
+    for (let i = 0; i > listaUsuarios.length; i++){
+        const emailAtual = listaUsuarios[i].email;
+        const p = document.createElement('p');
+        p.textContent = emailAtual;
+        divEx5.appendChild(p);  
+    }
 
 
 
@@ -120,6 +130,13 @@ for()
     // Agora escreva o código do Ex 4 e 5 juntos abaixo:
 
     // Seu código Ex 4 e 5:
+    for (let i = 0; i < listaUsuarios.length; i++) {
+        const emailAtual = listaUsuarios[i].email;
+        const p = document.createElement('p');
+        p.textContent = emailAtual;
+        p.classList.add('text-primary', 'fw-bold', 'm-2');
+        divEx5.appendChild(p);
+    }       
 
 
 
@@ -149,6 +166,29 @@ for()
     
     // Seu código Ex 6:
 
+    for (let i = 0; i < listaUsuarios.length; i++) {
+        const usuarioAtual = listaUsuarios[i];
+
+        // Criar o elemento pai (div do card)
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('card', 'col-4', 'mb-3', 'p-3');
+
+        // Criar o elemento filho 1 (h5 para o nome)
+        const nomeH5 = document.createElement('h5');
+        nomeH5.textContent = usuarioAtual.name;
+        nomeH5.classList.add('card-title');
+
+        // Criar o elemento filho 2 (p para o email)
+        const emailP = document.createElement('p');
+        emailP.textContent = usuarioAtual.email;
+        emailP.classList.add('text-muted');
+
+        // Montagem dos elementos
+        cardDiv.appendChild(nomeH5);
+        cardDiv.appendChild(emailP);
+        divEx6.appendChild(cardDiv);
+    }       
+    
 
 
 }
